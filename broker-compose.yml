@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+
+  broker:
+    image: aztecprotocol/aztec:latest
+    command:
+      - node
+      - --no-warnings
+      - /usr/src/yarn-project/aztec/dest/bin/index.js
+      - start
+      - --prover-broker
+      - --network
+      - alpha-testnet
+    environment:
+      DATA_DIRECTORY: /data-broker
+      LOG_LEVEL: info
+      ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
+      P2P_IP: ${P2P_IP}
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data-broker:/data-broker
+    entrypoint: >
+      sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet --prover-broker'
