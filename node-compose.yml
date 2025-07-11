@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  prover-node:
+    image: aztecprotocol/aztec:latest
+    command:
+      - node
+      - --no-warnings
+      - /usr/src/yarn-project/aztec/dest/bin/index.js
+      - start
+      - --prover-node
+      - --archiver
+      - --network
+      - alpha-testnet
+    environment:
+      # PROVER_COORDINATION_NODE_URL: " " # Optional, this can point to your own validator - or just simply ignore this
+      P2P_ENABLED: "true"
+      DATA_DIRECTORY: /data-prover
+      P2P_IP: ${P2P_IP}
+      DATA_STORE_MAP_SIZE_KB: "134217728"
+      ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
+      L1_CONSENSUS_HOST_URLS: ${L1_CONSENSUS_HOST_URLS}
+      LOG_LEVEL: info
+      PROVER_BROKER_HOST: http://{BROKER_IP}:8080
+      PROVER_PUBLISHER_PRIVATE_KEY: ${PROVER_PUBLISHER_PRIVATE_KEY}
+    ports:
+      - "8080:8080"
+      - "40400:40400"
+      - "40400:40400/udp"
+    volumes:
+      - ./data-prover:/data-prover
+    entrypoint: >
+      sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet --archiver --prover-node'
+
+
+
+
+
+
