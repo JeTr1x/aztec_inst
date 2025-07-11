@@ -28,7 +28,7 @@ services:
       PROVER_BROKER_HOST: http://broker:8080
       PROVER_PUBLISHER_PRIVATE_KEY: ${PROVER_PUBLISHER_PRIVATE_KEY}
     ports:
-      - "8080:8080"
+      - "8085:8080"
       - "40400:40400"
       - "40400:40400/udp"
     volumes:
@@ -51,6 +51,8 @@ services:
       LOG_LEVEL: info
       ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
       P2P_IP: ${P2P_IP}
+    ports:
+      - "8080:8080"
     volumes:
       - ./data-broker:/data-broker
     entrypoint: >
