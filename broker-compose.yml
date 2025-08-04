@@ -17,8 +17,9 @@ services:
       ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
       P2P_IP: ${P2P_IP}
     ports:
-      - "8080:8080"
+      - "8780:8080"
     volumes:
       - ./data-broker:/data-broker
+    restart: always
     entrypoint: >
       sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet --prover-broker'
