@@ -8,7 +8,7 @@ services:
     environment:
       PROVER_AGENT_COUNT: "3"
       PROVER_AGENT_POLL_INTERVAL_MS: "10000"
-      PROVER_BROKER_HOST: http://${BROKER_IP}:8080
+      PROVER_BROKER_HOST: http://${BROKER_IP}:8780
       PROVER_ID: "1"
     restart: unless-stopped
     volumes:
@@ -22,7 +22,7 @@ services:
     environment:
       PROVER_AGENT_COUNT: "3"
       PROVER_AGENT_POLL_INTERVAL_MS: "10000"
-      PROVER_BROKER_HOST: http://${BROKER_IP}:8080
+      PROVER_BROKER_HOST: http://${BROKER_IP}:8780
       PROVER_ID: "2"
     restart: unless-stopped
     volumes:
@@ -36,7 +36,7 @@ services:
     environment:
       PROVER_AGENT_COUNT: "3"
       PROVER_AGENT_POLL_INTERVAL_MS: "10000"
-      PROVER_BROKER_HOST: http://${BROKER_IP}:8080
+      PROVER_BROKER_HOST: http://${BROKER_IP}:8780
       PROVER_ID: "3"
     restart: unless-stopped
     volumes:
@@ -50,7 +50,7 @@ services:
     environment:
       PROVER_AGENT_COUNT: "3"
       PROVER_AGENT_POLL_INTERVAL_MS: "10000"
-      PROVER_BROKER_HOST: http://${BROKER_IP}:8080
+      PROVER_BROKER_HOST: http://${BROKER_IP}:8780
       PROVER_ID: "4"
     restart: unless-stopped
     volumes:
