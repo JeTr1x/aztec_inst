@@ -23,11 +23,12 @@ services:
       PROVER_BROKER_HOST: http://${BROKER_IP}:8080
       PROVER_PUBLISHER_PRIVATE_KEY: ${PROVER_PUBLISHER_PRIVATE_KEY}
     ports:
-      - "8080:8080"
-      - "40400:40400"
-      - "40400:40400/udp"
+      - "8780:8080"
+      - "47400:40400"
+      - "47400:40400/udp"
     volumes:
       - ./data-prover:/data-prover
+    restart: always
     entrypoint: >
       sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet --archiver --prover-node'
 
