@@ -16,4 +16,5 @@ cd
 cd prover
 docker compose down --remove-orphans
 
+cd
 rm -rf aztec_node aztec_broker aztec_agent
