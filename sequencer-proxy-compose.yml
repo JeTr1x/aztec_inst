@@ -20,4 +20,4 @@ services:
       - ${API_PORT}:8080
     restart: always
     volumes:
-      - /root/aztec-sequencer-node/data:/data # Local directory
+      - /root/aztec-sequencer-node-${ID}/data:/data # Local directory
