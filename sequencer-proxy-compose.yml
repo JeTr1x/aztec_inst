@@ -1,7 +1,6 @@
-name: aztec-sequencer-node
+name: aztec-sequencer-node-${ID}
 services:
   sequencer-node:
-    network_mode: host # Optional, run with host networking
     image: aztecprotocol/aztec:latest
     environment:
       ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
