@@ -3,7 +3,8 @@ PK=$1
 PROX=$2
 P2P_PORT=$3
 API_PORT=$4
-TAG=$5 # например 1.2.1  - без V
+ID=$5
+TAG=$6 # например 1.2.1  - без V
 IP=$(curl 2ip.ru)
 
 mkdir aztec-sequencer-node
