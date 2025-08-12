@@ -5,7 +5,8 @@ P2P_PORT=$3
 API_PORT=$4
 ID=$5
 TAG=$6 # например 1.2.1  - без V
-IP=$(curl 2ip.ru)
+IP=$(echo "$PROX" | sed -E 's|.*@([^:]+):.*|\1|')
+
 
 mkdir aztec-sequencer-node-${ID}
 cd aztec-sequencer-node-${ID}
