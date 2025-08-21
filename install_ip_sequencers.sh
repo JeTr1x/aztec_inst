@@ -4,8 +4,8 @@ ID=$2
 IP=$3
 
 
-mkdir aztec-sequencer-node-${ID}
-cd aztec-sequencer-node-${ID}
+mkdir aztec-sequencer-ipnode-${ID}
+cd aztec-sequencer-ipnode-${ID}
 
 wget -O docker-compose.yml https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/sequencer-ip-compose.yml
 
