@@ -7,7 +7,7 @@ IP=$3
 mkdir aztec-sequencer-ipnode-${ID}
 cd aztec-sequencer-ipnode-${ID}
 
-wget -O docker-compose.yml https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/sequencer-ip-compose.yml
+wget -O docker-compose.yml https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/sequencers-ip-compose.yml
 
 sudo tee .env > /dev/null <<EOF
 ETHEREUM_HOSTS="http://sepolia-rpc-1.rickychez.xyz"
