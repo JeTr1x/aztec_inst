@@ -14,8 +14,8 @@ cd aztec-sequencer-ipnode-${ID}
 wget -O docker-compose.yml https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/sequencerss-ip-compose.yml
 
 sudo tee .env > /dev/null <<EOF
-ETHEREUM_HOSTS="http://sepolia-rpc-1.rickychez.xyz"
-L1_CONSENSUS_HOST_URLS="http://sepolia-consensus-1.rickychez.xyz"
+ETHEREUM_HOSTS="http://176.9.48.61:18545"
+L1_CONSENSUS_HOST_URLS="http://176.9.48.61:13500"
 VALIDATOR_PRIVATE_KEY=${PK}
 DEDICATED_IP=${IP}
 ID=${ID}
