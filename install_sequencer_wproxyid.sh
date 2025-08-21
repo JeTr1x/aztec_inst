@@ -15,8 +15,8 @@ wget -O docker-compose.yml https://raw.githubusercontent.com/JeTr1x/aztec_inst/r
 sed -i s"|aztecprotocol/aztec:latest|aztecprotocol/aztec:${TAG}|" docker-compose.yml
 
 sudo tee .env > /dev/null <<EOF
-ETHEREUM_HOSTS="http://176.9.48.61:18545"
-L1_CONSENSUS_HOST_URLS="http://176.9.48.61:13500"
+ETHEREUM_HOSTS="http://sepolia-rpc-1.rickychez.xyz"
+L1_CONSENSUS_HOST_URLS="http://sepolia-consensus-1.rickychez.xyz"
 VALIDATOR_PRIVATE_KEY=${PK}
 P2P_IP=${IP}
 PROXY=${PROX}
