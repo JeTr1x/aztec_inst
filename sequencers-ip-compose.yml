@@ -22,4 +22,4 @@ services:
       sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet start --node --archiver --sequencer'
     restart: always
     volumes:
-      - /root/aztec-sequencer-node-${ID}/data:/data # Local directory
+      - /root/aztec-sequencer-ipnode-${ID}/data:/data # Local directory
