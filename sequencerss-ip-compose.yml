@@ -1,4 +1,4 @@
-name: aztec-sequencer-node-${ID}
+name: aztec-sequencer-ipnode-${ID}
 
 networks:
     ipvlan_test:
