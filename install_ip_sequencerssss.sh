@@ -3,6 +3,10 @@ PK=$1
 ID=$2
 IP=$3
 
+cd aztec-sequencer-ipnode-${ID}
+docker compose down
+cd 
+rm -rf aztec-sequencer-ipnode-${ID}
 
 mkdir aztec-sequencer-ipnode-${ID}
 cd aztec-sequencer-ipnode-${ID}
