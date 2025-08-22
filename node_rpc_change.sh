@@ -1,5 +1,5 @@
-NEWRPC=$2
-NEWCONS=$3
+NEWRPC=$1
+NEWCONS=$2
 
 cd aztec_node
 
