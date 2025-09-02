@@ -21,7 +21,7 @@ cd rl-swarm && git checkout v0.6.0 && python3 -m venv .venv
 
 # Скачивание кастомного скрипта на запуск ноды
 echo " Скачивание кастомного скрипта на запуск ноды"
-curl -o /root/rl-swarm/run_rl_swarm_true.sh https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/run_rl_swarm_true.sh
+curl -o /root/rl-swarm/run_rl_swarm_true.sh https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/run-rlsw-new.sh
 
 # НЕАКУТАЛЬНО
 # Скачивание кастомного конфига для ноды
