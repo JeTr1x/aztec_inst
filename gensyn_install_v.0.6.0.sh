@@ -1,6 +1,13 @@
 
 
 
+
+if [ ! -f /etc/systemd/system/rl-swarm.service ]; then
+  echo "Подготовка сервера"
+  bash <(wget -qO- https://raw.githubusercontent.com/JeTr1x/gensyn-install/refs/heads/main/prep.sh)
+fi
+
+
 # Остановка сервиса; удаление файлов
 systemctl stop rl-swarm.service && \
 rm -rf /root/rl-swarm
