@@ -274,14 +274,6 @@ echo_green ">> Done!"
 HUGGINGFACE_ACCESS_TOKEN="None"
 
 
-# Only export MODEL_NAME if user provided a non-empty value
-if [ -n "$MODEL_NAME" ]; then
-    export MODEL_NAME
-    echo_green ">> Using model: $MODEL_NAME"
-else
-    echo_green ">> Using default model from config"
-fi
-
 
 echo_green ">> Playing PRG game: true"
 
