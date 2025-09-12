@@ -21,6 +21,7 @@ VALIDATOR_PRIVATE_KEY=${PK}
 DEDICATED_IP=${IP}
 ID=${ID}
 EOF
+cp -r ~/aztecsnap/data data
 
 docker compose up -d
 docker compose logs -f
