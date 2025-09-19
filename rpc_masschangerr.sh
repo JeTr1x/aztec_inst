@@ -3,7 +3,7 @@
 NEWRPC=$1
 NEWCONS=$2
 
-for ID in $(seq 1 28); do
+for ID in $(seq 1 65); do
   echo "Обновляю узел $ID..."
 
   cd "aztec-sequencer-ipnode-${ID}" || { echo "Нет папки aztec-sequencer-ipnode-${ID}"; exit 1; }
