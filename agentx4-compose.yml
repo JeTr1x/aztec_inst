@@ -2,7 +2,7 @@ version: "3.8"
 services:
   agent1:
     image: aztecprotocol/aztec:2.0.2
-    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "alpha-testnet" ]
+    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "testnet" ]
     entrypoint: >
       sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network testnet --prover-agent'
     environment:
@@ -16,7 +16,7 @@ services:
 
   agent2:
     image: aztecprotocol/aztec:2.0.2
-    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "alpha-testnet" ]
+    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "testnet" ]
     entrypoint: >
       sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network testnet --prover-agent'
     environment:
@@ -30,7 +30,7 @@ services:
 
   agent3:
     image: aztecprotocol/aztec:2.0.2
-    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "alpha-testnet" ]
+    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "testnet" ]
     entrypoint: >
       sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network testnet --prover-agent'
     environment:
@@ -44,7 +44,7 @@ services:
 
   agent4:
     image: aztecprotocol/aztec:2.0.2
-    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "alpha-testnet" ]
+    command: [ "node", "--no-warnings", "/usr/src/yarn-project/aztec/dest/bin/index.js", "start", "--prover-agent", "--network", "testnet" ]
     entrypoint: >
       sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network testnet --prover-agent'
     environment:
