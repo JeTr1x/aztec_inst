@@ -10,7 +10,7 @@ services:
       - start
       - --prover-broker
       - --network
-      - alpha-testnet
+      - testnet
     environment:
       DATA_DIRECTORY: /data-broker
       LOG_LEVEL: info
