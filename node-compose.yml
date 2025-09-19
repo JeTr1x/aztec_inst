@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   prover-node:
-    image: aztecprotocol/aztec:latest
+    image: aztecprotocol/aztec:2.0.2
     command:
       - node
       - --no-warnings
@@ -30,7 +30,7 @@ services:
       - ./data-prover:/data-prover
     restart: always
     entrypoint: >
-      sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network alpha-testnet --archiver --prover-node'
+      sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network testnet --archiver --prover-node'
 
 
 
