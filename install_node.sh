@@ -12,9 +12,7 @@ mkdir aztec_node
 cd aztec_node
 wget -O docker-compose.yml https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/node-compose.yml
 wget -O .env https://raw.githubusercontent.com/JeTr1x/aztec_inst/refs/heads/main/.env.node
-sed -i s"|aztecprotocol/aztec:latest|aztecprotocol/aztec:1.2.1|" docker-compose.yml
 sed -ie s"/P2P_IP=/P2P_IP=${SERVER_IP}/" .env
-IP="65.108.124.19"
 sed -ie s"/BROKER_IP=/BROKER_IP=${BROKER_IP}/" .env
 sed -ie s"/PROVER_PUBLISHER_PRIVATE_KEY=/PROVER_PUBLISHER_PRIVATE_KEY=${PK}/" .env
 sed -ie s"/PROVER_ID=/PROVER_ID=${ADDRESS}/" .env
