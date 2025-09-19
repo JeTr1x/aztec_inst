@@ -1,0 +1,25 @@
+name: aztec-sequencer-ipnode-${ID}
+
+networks:
+    ipvlan_test:
+        external: true
+        name: ipvlan_test
+
+services:
+  sequencer-node:
+    image: aztecprotocol/aztec:2.0.2
+    environment:
+      ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
+      L1_CONSENSUS_HOST_URLS: ${L1_CONSENSUS_HOST_URLS}
+      DATA_DIRECTORY: /data
+      VALIDATOR_PRIVATE_KEY: ${VALIDATOR_PRIVATE_KEY}
+      P2P_IP: ${DEDICATED_IP}
+      LOG_LEVEL: debug
+    networks:
+        ipvlan_test:
+            ipv4_address: ${DEDICATED_IP}
+    entrypoint: >
+      sh -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js start --network testnet start --node --archiver --sequencer'
+    restart: always
+    volumes:
+      - /root/aztec-sequencer-ipnode-${ID}/data:/data # Local directory
