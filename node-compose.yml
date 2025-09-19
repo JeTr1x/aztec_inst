@@ -10,7 +10,7 @@ services:
       - --prover-node
       - --archiver
       - --network
-      - alpha-testnet
+      - testnet
     environment:
       # PROVER_COORDINATION_NODE_URL: " " # Optional, this can point to your own validator - or just simply ignore this
       P2P_ENABLED: "true"
