@@ -1,0 +1,40 @@
+
+networks:
+    ipvlan_test:
+        external: true
+        name: ipvlan_test
+
+        
+services:
+  aztec-sequencer:
+    image: "aztecprotocol/aztec:2.0.3"
+    container_name: "aztec-sequencer"
+    ports:
+      - ${AZTEC_PORT}:${AZTEC_PORT}
+      - ${P2P_PORT}:${P2P_PORT}
+      - ${P2P_PORT}:${P2P_PORT}/udp
+    volumes:
+      - ${DATA_DIRECTORY}:/var/lib/data
+      - ${KEY_STORE_DIRECTORY}:/var/lib/keystore
+    environment:
+      KEY_STORE_DIRECTORY: /var/lib/keystore
+      DATA_DIRECTORY: /var/lib/data
+      LOG_LEVEL: ${LOG_LEVEL}
+      ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
+      L1_CONSENSUS_HOST_URLS: ${L1_CONSENSUS_HOST_URLS}
+      P2P_IP: ${DEDICATED_IP}
+      P2P_PORT: ${P2P_PORT}
+      AZTEC_PORT: ${AZTEC_PORT}
+    entrypoint: >-
+      node
+      --no-warnings
+      /usr/src/yarn-project/aztec/dest/bin/index.js
+      start
+      --node
+      --archiver
+      --sequencer
+      --network testnet
+    networks:
+        ipvlan_test:
+            ipv4_address: ${DEDICATED_IP}
+    restart: always
