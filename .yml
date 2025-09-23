@@ -22,7 +22,7 @@ services:
       LOG_LEVEL: ${LOG_LEVEL}
       ETHEREUM_HOSTS: ${ETHEREUM_HOSTS}
       L1_CONSENSUS_HOST_URLS: ${L1_CONSENSUS_HOST_URLS}
-      P2P_IP: ${DEDICATED_IP}
+      P2P_IP: ${P2P_IP}
       P2P_PORT: ${P2P_PORT}
       AZTEC_PORT: ${AZTEC_PORT}
     entrypoint: >-
@@ -36,5 +36,5 @@ services:
       --network testnet
     networks:
         ipvlan_test:
-            ipv4_address: ${DEDICATED_IP}
+            ipv4_address: ${P2P_IP}
     restart: always
