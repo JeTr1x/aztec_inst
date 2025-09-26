@@ -6,7 +6,7 @@ ID=$5
 P2PBK=$6
 
 
-echo "Обновляю узел $ID..."
+mdkir aztec-sequencer-ipnode-${ID}
 cd "aztec-sequencer-ipnode-${ID}" || { echo "Нет папки aztec-sequencer-ipnode-${ID}"; exit 1; }
 
 docker compose down -v
